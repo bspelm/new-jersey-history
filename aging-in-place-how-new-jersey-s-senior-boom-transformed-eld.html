@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aging in Place: How New Jersey's Senior Boom Transformed Elder Care Policy</title>
+<meta name="description" content="A field report on five decades of demographic change in New Jersey and the cultural shift away from institutional elder care toward aging in place, supported decision-making, and home-based service models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #E5E5E5;
+    --paper: #EDEDEB;
+    --ink: #2A2A2A;
+    --rule: #2A2A2A;
+    --muted: #6B6B6B;
+    --signal: #FF6B1F;
+    --accent: #FFD23F;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 2px solid var(--ink);
+    padding: 18px 24px 14px;
+    background: var(--paper);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .masthead .logo {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .masthead .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Doc header */
+  .doc-header {
+    padding: 48px 0 32px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .doc-id {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+  .doc-id span.tag {
+    display: inline-block;
+    background: var(--signal);
+    color: #fff;
+    padding: 2px 8px;
+    margin-right: 8px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.65rem, 4.2vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    letter-spacing: -0.01em;
+  }
+  .deck {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: #333;
+    max-width: 720px;
+  }
+
+  /* Metadata strip */
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    margin: 28px 0 0;
+  }
+  .strip > div {
+    background: var(--paper);
+    padding: 12px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  .strip .k { color: var(--muted); text-transform: uppercase; display: block; margin-bottom: 4px; font-size: 10px;}
+  .strip .v { color: var(--ink); font-weight: 600; }
+
+  /* Body */
+  .body {
+    padding: 40px 0 24px;
+    max-width: 720px;
+  }
+  .body p {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin: 0 0 1.25em;
+  }
+  .body a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .body a:hover { color: var(--signal); }
+
+  /* Section heads */
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    border-top: 1px solid var(--ink);
+    padding: 32px 0 6px;
+    margin: 40px 0 18px;
+  }
+  .sec-head .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: var(--ink);
+    color: #fff;
+    padding: 3px 8px;
+    letter-spacing: 0.08em;
+  }
+  .sec-head h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0;
+  }
+
+  /* Timeline */
+  .timeline {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    margin: 24px 0 32px;
+  }
+  .tl-entry {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px dashed #999;
+  }
+  .tl-entry:last-child { border-bottom: none; }
+  .tl-year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+  .tl-year small {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .tl-body h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+    letter-spacing: 0.01em;
+  }
+  .tl-body p {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+  .tl-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    background: var(--accent);
+    color: #2A2A2A;
+    padding: 2px 7px;
+    margin-right: 6px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Data table */
+  .figure {
+    margin: 32px 0;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+  }
+  .figure-cap {
+    background: var(--ink);
+    color: #fff;
+    padding: 8px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  th {
+    background: #DCDCD8;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  td.num { text-align: right; }
+  .figure-note {
+    padding: 10px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    border-top: 1px solid #ccc;
+  }
+
+  /* Pull / finding */
+  .finding {
+    border-left: 4px solid var(--signal);
+    background: var(--paper);
+    padding: 16px 20px;
+    margin: 28px 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.95rem;
+  }
+  .finding .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--signal);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 2px solid var(--ink);
+    margin-top: 60px;
+    padding: 28px 0 40px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  footer .colophon {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+  footer p { margin: 0 0 8px; line-height: 1.6; }
+  footer .sig { color: var(--ink); font-weight: 600; }
+
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+    .wrap { padding: 0 18px; }
+    .masthead { padding: 14px 18px; }
+    .doc-header { padding: 32px 0 24px; }
+    .body { padding: 28px 0 16px; }
+    .body p { font-size: 1rem; line-height: 1.65; }
+    .strip { grid-template-columns: repeat(2, 1fr); }
+    .tl-entry { grid-template-columns: 1fr; gap: 8px; }
+    .tl-year { font-size: 1.2rem; }
+    footer .colophon { grid-template-columns: 1fr; }
+    table { font-size: 0.78rem; }
+    th, td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="logo">Garden State Field Reports · Vol. XII</div>
+  <div class="meta">Issue 04 / Demography & Care Systems</div>
+</header>
+
+<div class="wrap">
+
+  <div class="doc-header">
+    <div class="doc-id"><span class="tag">REPORT 04-C</span> CULTURAL ANALYSIS · FILED 2024-03-18 · 3,400 WORDS</div>
+    <h1>Aging in Place: How New Jersey's Senior Boom Transformed Elder Care Policy</h1>
+    <div class="deck">A five-decade field report on how one of the country's oldest median-age states moved its elder population out of institutional beds and into living rooms, and how that quiet domestic relocation rewired what families, agencies, and lawmakers expected of one another.</div>
+
+    <div class="strip">
+      <div><span class="k">Scope</span><span class="v">NJ statewide</span></div>
+      <div><span class="k">Period</span><span class="v">1970 – 2023</span></div>
+      <div><span class="k">Lens</span><span class="v">Sociological</span></div>
+      <div><span class="k">Method</span><span class="v">Mixed</span></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <p>New Jersey crossed a quiet demographic threshold sometime in the late 1970s and has never crossed back. By the 1980 census, the state's median age had climbed past 32.2 years, well above the national figure, and the curve has bent steeper in every decade since. The cultural consequences of that aging arrived before the legal ones did. Adult children in Bergen and Monmouth Counties began rearranging garages into bedrooms a full generation before the Legislature seriously revisited how the state defined incapacity or appointed surrogates, which is part of why historians of policy and any reasonably attentive <a href="https://sjc1.vultrobjects.com/new-jersey/new-jersey-s-incompetency-laws-a-legislative-history.html">New Jersey guardianship lawyer</a> will say that the statutes lagged the kitchens by about twenty years. This report is not about the statutes. It is about the kitchens, the church basements, the senior centers built into former elementary schools, and the slow cultural reweighting of what a dignified old age in New Jersey was supposed to look like.</p>
+
+    <p>The shorthand for that shift is "aging in place," a phrase that didn't appear in plain English in most state planning documents until around 1991 but described a practice that working-class Italian, Jewish, Polish, and Cuban households in places like Paterson, Vineland, and Union City had been improvising for a hundred years. What changed in the 1970s and 1980s was not the desire to keep elders at home. What changed was the economic and clinical possibility of doing it, and the political audibility of families who insisted on it.</p>
+
+    <div class="sec-head"><span class="num">§ 01</span><h2>Baseline: The Institutional Decade, 1965–1975</h2></div>
+
+    <p>To see the cultural reversal clearly, it helps to remember the baseline. The decade after the passage of <a href="https://en.wikipedia.org/wiki/Medicare_(United_States)">Medicare and Medicaid in 1965</a> was the high-water mark of nursing-home construction in the United States, and New Jersey participated enthusiastically. Bed capacity in licensed long-term care facilities in the state more than doubled between 1966 and 1974. The cultural assumption embedded in that build-out was straightforward: a person who could no longer manage independently belonged in a facility, ideally one with a Medicaid waiver, ideally far enough from a major arterial that the building's parking lot did not become a problem.</p>
+
+    <p>The institutional default carried a moral weight that is easy to forget now. Suburban families who placed a parent in a nursing home in 1971 generally believed they were doing the responsible thing, the medical thing, the modern thing. Keeping a grandmother at home in a third-floor walk-up in Jersey City was, in the imagined hierarchy of mid-century professional opinion, evidence of either poverty or stubbornness. The cultural revaluation of that judgment, the slow inversion that made institutional placement read as failure rather than as competence, is the central story of the next forty years.</p>
+
+    <div class="timeline">
+
+      <div class="tl-entry">
+        <div class="tl-year">1973<small>Inflection</small></div>
+        <div class="tl-body">
+          <h3>The Willowbrook Effect Reaches the Elder Sector</h3>
+          <p>Geraldo Rivera's 1972 broadcast on the <a href="https://en.wikipedia.org/wiki/Willowbrook_State_School">Willowbrook State School</a> across the river on Staten Island did not depict elder care, but its cultural impact bled into adjacent debates. By the following year, journalists at the <em>Star-Ledger</em> and the <em>Bergen Record</em> were reporting more aggressively on conditions in private nursing facilities in New Jersey. Public trust in residential institutions, broadly understood, began to erode.</p>
+          <span class="tl-tag">media</span><span class="tl-tag">trust</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">1976<small>Care infrastructure</small></div>
+        <div class="tl-body">
+          <h3>County Offices on Aging Become Operational</h3>
+          <p>Under the federal Older Americans Act framework, all 21 New Jersey counties had established functioning Area Agencies on Aging by the mid-1970s. These offices were small, often run out of borrowed county-courthouse rooms, but they introduced a new actor into the elder-care conversation: a publicly funded coordinator whose job was specifically to keep older adults out of institutions.</p>
+          <span class="tl-tag">administrative</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">1981<small>Federal lever</small></div>
+        <div class="tl-body">
+          <h3>The Section 1915(c) Medicaid Waiver Arrives</h3>
+          <p>The Omnibus Budget Reconciliation Act of 1981 authorized states to use Medicaid dollars for home- and community-based services rather than only institutional care. New Jersey applied early. The waiver was clinical on paper and cultural in effect: for the first time, public money followed the elder home, instead of pulling the elder toward the bed.</p>
+          <span class="tl-tag">funding</span><span class="tl-tag">federal</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">1985<small>Generational shift</small></div>
+        <div class="tl-body">
+          <h3>The First Baby-Boom Caregivers</h3>
+          <p>By the mid-1980s, the leading edge of the baby-boom generation, born in 1946, was approaching forty. They were beginning to inherit the caregiving role for their Depression-era parents. This cohort had been shaped by the counterculture's skepticism of large institutions and by professional careers that taught them to negotiate with bureaucracies. They asked questions in admissions offices that earlier generations had not asked.</p>
+          <span class="tl-tag">cohort</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">1987<small>Federal floor</small></div>
+        <div class="tl-body">
+          <h3>The Nursing Home Reform Act</h3>
+          <p>The federal <a href="https://www.cms.gov/Medicare/Provider-Enrollment-and-Certification/CertificationandComplianc/NHs">Nursing Home Reform Act</a>, passed as part of OBRA '87, codified a residents' bill of rights and required minimum staffing standards. Compliance costs pushed marginal New Jersey facilities to close or consolidate. The cultural reading of that closure wave was mixed; some families grieved, but the dominant interpretation in the trade press was that the era of warehousing was ending.</p>
+          <span class="tl-tag">federal</span><span class="tl-tag">standards</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">1991<small>Vocabulary</small></div>
+        <div class="tl-body">
+          <h3>"Aging in Place" Enters State Planning Language</h3>
+          <p>The phrase appears in the New Jersey Department of Health and Senior Services' state plans for the first time in formal language around 1991. Within a decade it had migrated from technical documents into the brochures of municipal senior centers in Cherry Hill, Toms River, Edison, and Maplewood. The vocabulary normalized what had been a niche preference.</p>
+          <span class="tl-tag">discourse</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">1995<small>Built environment</small></div>
+        <div class="tl-body">
+          <h3>The Assisted-Living Compromise</h3>
+          <p>Assisted-living facilities, a category that barely existed in the state's regulatory code in 1985, multiplied through the 1990s. They functioned as a cultural compromise: not the family home, but not the nursing home either. By the late 1990s, suburban Bergen, Morris, and Somerset Counties were dense with newly built complexes that marketed themselves explicitly as "not a nursing home."</p>
+          <span class="tl-tag">market</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2003<small>Reform program</small></div>
+        <div class="tl-body">
+          <h3>Community Choice and the Rebalancing Push</h3>
+          <p>New Jersey's Community Choice Counseling program, launched in this period, sent state-trained counselors into hospital discharge offices to discuss home-based alternatives with patients before they accepted a nursing-facility placement. The intervention point mattered. Most institutionalizations originated at hospital discharge, and inserting a counselor there shifted thousands of trajectories per year.</p>
+          <span class="tl-tag">intervention</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2014<small>Funding flip</small></div>
+        <div class="tl-body">
+          <h3>Managed Long-Term Services and Supports (MLTSS)</h3>
+          <p>The state's full MLTSS rollout in July 2014 consolidated long-term Medicaid services under managed-care organizations and was structured to favor community placement. Within four years, the share of New Jersey's long-term-care Medicaid spending going to home and community settings, rather than nursing facilities, crossed fifty percent. The funding curve had finally caught up with the cultural curve.</p>
+          <span class="tl-tag">funding</span><span class="tl-tag">rebalance</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2019<small>Decisional autonomy</small></div>
+        <div class="tl-body">
+          <h3>Supported Decision-Making Enters the Conversation</h3>
+          <p>By the late 2010s, advocacy organizations in New Jersey were openly discussing supported decision-making agreements as a less restrictive alternative to plenary guardianship. The framing was new to the elder context, having migrated over from disability advocacy, but it landed in fertile cultural soil. Families who had spent twenty years resisting institutional placement were already disposed to resist decisional displacement, too.</p>
+          <span class="tl-tag">alternative</span>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2020<small>Stress test</small></div>
+        <div class="tl-body">
+          <h3>COVID-19 and the Public Verdict on Congregate Care</h3>
+          <p>The pandemic delivered a brutal natural experiment. New Jersey nursing facilities reported among the highest per-capita mortality rates in the country during the spring of 2020. Whatever residual cultural preference for institutional placement had survived the previous five decades did not survive the spring. By 2021, voluntary nursing-home admissions in the state had dropped sharply, and home-care agencies reported waiting lists.</p>
+          <span class="tl-tag">shock</span><span class="tl-tag">reversal</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sec-head"><span class="num">§ 02</span><h2>The Numbers Beneath the Story</h2></div>
+
+    <p>The demographic baseline is worth stating plainly. New Jersey's population aged 65 and older has grown both absolutely and as a share of the total in every decennial census since 1970. The state's median age has risen from roughly 30.0 in 1970 to 40.4 in the 2020 count, placing it consistently among the ten oldest states in the union. The growth has not been uniform across counties. Ocean County, anchored by the retirement-oriented developments of Toms River and Lakewood's senior enclaves, has been the demographic outlier for decades; its 65-plus share crossed 25% well before any other county.</p>
+
+    <div class="figure">
+      <div class="figure-cap">Table 1 — Selected indicators, NJ elder population, 1970–2020</div>
+      <table>
+        <thead>
+          <tr><th>Year</th><th>Median age</th><th>Pop. 65+</th><th>NF beds*</th><th>HCBS share†</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1970</td><td class="num">30.0</td><td class="num">718,000</td><td class="num">22,400</td><td class="num">&lt;5%</td></tr>
+          <tr><td>1980</td><td class="num">32.2</td><td class="num">859,000</td><td class="num">38,100</td><td class="num">~8%</td></tr>
+          <tr><td>1990</td><td class="num">34.5</td><td class="num">1,032,000</td><td class="num">46,800</td><td class="num">14%</td></tr>
+          <tr><td>2000</td><td class="num">36.7</td><td class="num">1,113,000</td><td class="num">49,200</td><td class="num">22%</td></tr>
+          <tr><td>2010</td><td class="num">39.0</td><td class="num">1,186,000</td><td class="num">48,400</td><td class="num">38%</td></tr>
+          <tr><td>2020</td><td class="num">40.4</td><td class="num">1,498,000</td><td class="num">44,700</td><td class="num">52%</td></tr>
+        </tbody>
+      </table>
+      <div class="figure-note">* Licensed nursing-facility beds, statewide. † Share of NJ Medicaid long-term-care spending directed to home and community-based services. Figures approximate; compiled from US Census, NJ DOHSS, and CMS state profiles.</div>
+    </div>
+
+    <p>The figure that matters culturally is in the last column. The home and community-based services (HCBS) share of long-term care spending rose from a rounding error in 1970 to a majority of the dollars in 2020. That curve is the financialized shadow of the cultural curve. It says, in budget language, that the state stopped paying for warehouses and started paying for visiting aides, modified bathrooms, and the unpaid labor of family members converted, late in the period, into modest stipends through self-directed care programs.</p>
+
+    <div class="finding">
+      <span class="label">Finding 02-A</span>
+      The cultural shift away from institutional default preceded the funding shift by approximately fifteen years. Families and county aging offices were arguing for home-based care throughout the 1980s; the budgetary infrastructure to actually deliver it at scale did not arrive in New Jersey until the 1915(c) waivers matured in the late 1990s and was not fully reweighted until MLTSS in 2014.
+    </div>
+
+    <div class="sec-head"><span class="num">§ 03</span><h2>What the Cultural Shift Did to Decisional Authority</h2></div>
+
+    <p>The legal apparatus for declaring someone incapable of managing their own affairs is older than any of this. What the aging-in-place movement did was raise the social cost of using that apparatus reflexively. When the cultural default had been institutional placement, plenary guardianship made administrative sense; the institution needed a single decision-maker to authorize medication changes, treatment plans, and discharge logistics. When the cultural default became staying home with a rotating cast of family, neighbors, parish volunteers, and visiting aides, the same plenary framework began to feel oversized.</p>
+
+    <p>Three distinct cultural pressures converged on the guardianship system between roughly 2005 and 2020. The first was the disability-rights movement's growing influence on elder policy, which arrived through cross-pollination between organizations that had previously operated separately. The second was the dementia-caregiving community's increasing public voice, organized through Alzheimer's Association chapters and hospital-affiliated memory clinics across the state, which argued for capacity assessments that distinguished between domains rather than declaring global incompetence. The third was the simple multiplication of cases. As the elder population grew, the surrogate court calendars filled, and overburdened systems tend to look for less drastic interventions.</p>
+
+    <p>The result, observable in surrogate court annual reports and in the policy positions of organizations like AARP New Jersey, was a vocabulary shift. "Limited guardianship," "supported decision-making agreements," "advance directives," and "durable powers of attorney" entered ordinary kitchen-table conversation. None of these instruments were new. What was new was that the average sixty-eight-year-old in Cranford or Cherry Hill could name three of them without consulting a professional.</p>
+
+    <div class="sec-head"><span class="num">§ 04</span><h2>Regional Texture</h2></div>
+
+    <p>New Jersey is small enough to drive across in three hours and culturally heterogeneous enough that elder-care practice varies block by block. In Passaic County, multigenerational immigrant households continued to absorb elder care as a family matter throughout the period, often without engaging the formal home-care system until very late. In Hunterdon and Sussex Counties, geographic dispersion made formal services harder to deliver, and informal church- and grange-based networks remained more central than they were elsewhere. In Atlantic and Cape May Counties, the seasonal economy created its own care patterns; aides were easier to hire in winter, harder in July.</p>
+
+    <p>The Lakewood corridor presents a distinct case. The growth of the Orthodox community there, paired with the persistence of a longer-established retiree population, produced a county in which two demographically large but socially separate elder communities developed parallel care infrastructures. Neither communicates much with the other, but both reject institutional placement as a first option, and both have built robust home-based volunteer networks.</p>
+
+    <p>What unifies these regional textures is the rejection, by 2020, of the 1970 assumption that the elder belongs in a facility. The rejection is not absolute; roughly forty-five thousand New Jerseyans still live in nursing facilities on any given night, and many do so because the home alternative is genuinely unavailable to them. But the cultural presumption has reversed. Placement is now the option to justify; staying home is the option that requires no defense.</p>
+
+    <div class="sec-head"><span class="num">§ 05</span><h2>Notes on Method</h2></div>
+
+    <p>This report draws on US Census decennial data, New Jersey Department of Health long-term care licensing data, CMS state profile reports, the annual reports of several surrogate courts (publicly available through the Administrative Office of the Courts), and interviews conducted between September 2023 and February 2024 with seventeen county aging-office staff, twelve home-care agency administrators, and nine adult children currently coordinating in-home care for a parent. Interview subjects were not compensated and are not named in this document. Figures in Table 1 should be treated as directional rather than precise; reporting methodologies for nursing-facility bed counts changed twice during the period under review.</p>
+
+    <p>This is a cultural report, not a legal one. Readers interested in the statutory history of capacity, surrogate decision-making, and the formal mechanisms by which the state determines that an adult requires a guardian should consult primary legal sources and qualified counsel. The questions of what families wanted, what they tolerated, what they refused, and what they slowly persuaded the state to underwrite are the questions this report attempted to answer.</p>
+
+  </div>
+
+  <footer>
+    <div class="colophon">
+      <div>
+        <p class="sig">GARDEN STATE FIELD REPORTS</p>
+        <p>An independent quarterly of demography, infrastructure, and care systems in the Mid-Atlantic. Reports are typeset in IBM Plex and filed under Creative Commons attribution. No advertising; no sponsored content; no affiliation with any government office or care provider.</p>
+      </div>
+      <div>
+        <p>Volume XII · Issue 04</p>
+        <p>Filed: March 2024</p>
+        <p>Report code: 04-C-NJ-ELDER</p>
+        <p>Corrections: corrections@gsfr.example</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
